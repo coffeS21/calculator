@@ -1,7 +1,7 @@
 const addingForm =  document.add
-
-function addFunction(){
-    //this will grab the value of the data entered 
+const subForm = document.sub
+const mulForm = document.mul
+     //this will grab the value of the data entered 
     //into the input 
     //you do not need an html value tag to get the value
     const input1 = addingForm.firstNumAdd.value
@@ -10,12 +10,14 @@ function addFunction(){
     //into a number as well as using the parseInt method
      const addIt = +input1 + +input2
     // const addIt = parseInt(input1) + parseInt(input2)
-    return addIt
+    const addElement = document.createElement("h1")
+    addElement.textContent = addIt
+    document.body.appendChild(addElement)
+    // console.log(addElement)
+    // console.log(addIt)
 }
-
 
 addingForm.addEventListener("submit", e =>{
     e.preventDefault()
     addFunction()
-    console.log(addFunction())
 })
