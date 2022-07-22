@@ -1,6 +1,8 @@
 const addingForm =  document.add
 const subForm = document.sub
 const mulForm = document.mul
+
+const addFunction = ()=>{
      //this will grab the value of the data entered 
     //into the input 
     //you do not need an html value tag to get the value
@@ -20,4 +22,18 @@ const mulForm = document.mul
 addingForm.addEventListener("submit", e =>{
     e.preventDefault()
     addFunction()
+})
+
+const mulFunction = ()=>{
+    const input1 = mulForm.firstNumMul.value
+    const input2 = mulForm.secondNumMul.value
+    const timesIt = input1 * input2
+    const mulElement = document.createElement("h1")
+    mulElement.textContent = timesIt
+    document.body.appendChild(mulElement)
+}
+
+mulForm.addEventListener("submit", e =>{
+    e.preventDefault()
+    mulFunction()
 })
